@@ -38,6 +38,7 @@ const LabelsSummary = ({
   containerCoordinates,
   detectedLabels,
   image,
+  productDetails,
   projectVersionArn,
   showLabelBoundingBoxes,
 }) => {
@@ -152,7 +153,18 @@ const LabelsSummary = ({
               {JSON.stringify(apiResponse, undefined, 2)}
             </div>
           </LabelsAccordion>
-        </>
+          <LabelsAccordion labelName="Product Details">
+            {productDetails ? (
+            <div style={{
+              whiteSpace: "pre-wrap",
+              wordWrap: "break-word",
+              textAlign: "justify"
+            }}>{productDetails}</div>
+            ) : (
+            <span>No product details available.</span>
+            )}
+            </LabelsAccordion>
+            </>
       )}
     </div>
   );

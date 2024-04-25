@@ -1,4 +1,6 @@
 export const mapResults = (data, type) => {
+
+
   const parseArn = arn => {
     const s = arn.split(":")[5].split("/");
     return [s[1], s[3]];
