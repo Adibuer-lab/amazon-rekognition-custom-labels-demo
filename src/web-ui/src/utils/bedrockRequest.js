@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const sendToApiGateway = async (input) => {
-  const apiGatewayUrl = 'https://05vul39rh6.execute-api.us-west-2.amazonaws.com/test/ask';
+  const apiGatewayUrl = '';
   const requestBody = { bedrock_input: input };
 
   try {
